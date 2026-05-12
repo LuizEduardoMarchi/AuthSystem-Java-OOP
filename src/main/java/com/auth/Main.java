@@ -1,4 +1,4 @@
-package main.java.com.auth;
+package com.auth;
 
 public class Main {
     

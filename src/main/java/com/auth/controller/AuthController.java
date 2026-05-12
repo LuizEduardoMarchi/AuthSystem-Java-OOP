@@ -1,4 +1,4 @@
-package main.java.com.auth.controller;
+package com.auth.controller;
 
 public class AuthController {
     

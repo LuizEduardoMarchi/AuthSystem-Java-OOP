@@ -1,4 +1,4 @@
-package main.java.com.auth.repository;
+package com.auth.repository;
 
 public class UserRepository {
     

@@ -1,16 +1,16 @@
-package main.java.com.auth.model;
+package com.auth.model;
 
 public class User {
     
-    // Attributes
+    // Attributes.
     private Long userID;
     private String userName;
     private String passwordHash;
 
-    // Attributes from role
+    // Attributes from role.
     private Role role;
 
-    // Check again this attribute
+    // Check again this attribute.
     public boolean authenticate(String password) {
         if (this.passwordHash.equals(password)) {
             return true;
@@ -19,22 +19,29 @@ public class User {
         }
     }
 
-    public void updateUserName(String newName) {
+    // Getter and setter for UserName.
+    public String getUserName() {
+        return this.userName;
+    }
+
+    public void setNewUserName(String newName) {
         this.userName = newName;
     }
 
-    public boolean deleteOwnAccount(String passwordConfirm) {
+    // Method for users delete their own account.
+    public boolean deleteOwnAccount(String passwordHashConfirm) {
 
         // If password is wrong return false;
-        if (!this.passwordHash.equals(passwordConfirm)) {
+        if (!this.passwordHash.equals(passwordHashConfirm)) {
             return false;
         }
 
-        // Return true when passwords is right
+        // Return true when passwords is right.
         return true;
     }
 
-    public void updatePassword (String newPassword){
+    // Setter for new password.
+    public void setNewPassword(String newPassword) {
         this.passwordHash = newPassword; 
     }
 }

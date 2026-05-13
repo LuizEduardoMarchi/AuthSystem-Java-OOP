@@ -44,4 +44,10 @@ public class User {
     public void setNewPassword(String newPassword) {
         this.passwordHash = newPassword; 
     }
+
+    // Getter for password
+    public String getPasswordHash() {
+        return this.passwordHash;
+    }
+
 }
